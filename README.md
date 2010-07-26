@@ -13,5 +13,5 @@ ErrorNot (github.com/errornot/ErrorNot) logger. Configure as such in project's f
           errornot:
             class: CI_Logger_ErrorNot
             param:
-              api_key: "project_api_key"
-              url:     "http://errornot.example.com"
+              api_key:    "project_api_key"
+              server_url: "http://errornot.example.com"
