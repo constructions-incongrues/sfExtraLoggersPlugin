@@ -49,9 +49,15 @@ class CI_Logger_ErrorNot extends sfLogger
         // Force log level to error as we only take care of those
         $options['level'] = 'err';
 
+        // Request HTTP_Request2 php-errornot dependency
+        include('HTTP/Request2.php');
+
         // Instanciate and configure ErrorNot client
         include(dirname(__FILE__).'/../../vendor/php-errornot/errornot.php');
         $this->client = new Services_ErrorNot($options['server_url'], $options['api_key']);
+
+        // Listen for exceptions
+        $dispatcher->connect('application.log', array($this, 'listenToLogException'));
 
         // Call common initialization code
         return parent::initialize($dispatcher, $options);
@@ -66,7 +72,7 @@ class CI_Logger_ErrorNot extends sfLogger
      *
      * TODO : inject more context data before sending to server
      */
-    public function logException($message, $priority)
+    public function logException($exception)
     {
         $this->client->notifyException($exception);
     }
@@ -74,13 +80,13 @@ class CI_Logger_ErrorNot extends sfLogger
     /**
      * Listens to "application.log" event.
      *
-     * This method is overriden in order to make sure we catch full exception data
+     * Make sure we catch full exception data
      * for sending to ErrorNot server.
      *
      * (non-PHPdoc)
      * @see log/sfLogger::listenToLogEvent()
      */
-    public function listenToLogEvent(sfEvent $event)
+    public function listenToLogException(sfEvent $event)
     {
         // We only want to take care of exceptions
         $subject = $event->getSubject();
