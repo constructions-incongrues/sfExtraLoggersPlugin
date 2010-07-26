@@ -1,0 +1,3 @@
+[submodule "lib/vendor/php-errornot"]
+	path = lib/vendor/php-errornot
+	url = git://github.com/francois2metz/php-errornot.git
