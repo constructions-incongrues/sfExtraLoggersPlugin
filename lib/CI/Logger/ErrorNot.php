@@ -2,6 +2,20 @@
 /**
  * Logger that sends messages to an ErrorNot server.
  *
+ * It must be declared in project's factories.yml :
+ * <code>
+ * logger:
+ *   class:   sfAggregateLogger
+ *   param:
+ *     level:   info
+ *     loggers:
+ *       errornot:
+ *         class: CI_Logger_ErrorNot
+ *         param:
+ *           api_key: "project_api_key"
+ *           url:     "http://errornot.example.com"
+ * </code>
+ *
  * @see http://github.com/errornot/ErrorNot
  */
 class CI_Logger_ErrorNot extends sfLogger
