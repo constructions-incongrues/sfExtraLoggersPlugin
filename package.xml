@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfExtraLoggersPlugin</name>
+ <uri>http://github.com/contructions-incongrues/sfExtraLoggersPlugin/tarball/master</uri>
+ <summary>Additional symfony loggers</summary>
+ <description>Additional loggers for projects developed using the symfony framework.</description>
+ <lead>
+  <name>Tristan Rivoallan</name>
+  <user>trivoallan</user>
+  <email>tristan@rivoallan.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-07-27</date>
+ <time>14:15:41</time>
+ <version>
+  <release>0.2.0</release>
+  <api>0.2.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+ <notes>
+ * Implemented ErrorNot logger
+ * Initial version of pear package
+ </notes>
+ <contents>
+  <dir baseinstalldir="constructions-incongrues" name="/">
+    <file baseinstalldir="constructions-incongrues" md5sum="b7e47feee85109c4b70fb419974e5bbc" name="lib/CI/Logger/ErrorNot.php" role="php" />
+    <file baseinstalldir="constructions-incongrues" md5sum="2ad11601adaa30db869965dc46e1f037" name="lib/vendor/php-errornot/errornot.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+    <name>HTTP_Request2</name>
+    <channel>pear.php.net</channel>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.2.0</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2010-07-27</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+ * Implemented ErrorNot logger
+ * Initial version of pear package
+   </notes>
+  </release>
+ </changelog>
+</package>
