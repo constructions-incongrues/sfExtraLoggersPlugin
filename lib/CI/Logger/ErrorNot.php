@@ -64,7 +64,7 @@ class CI_Logger_ErrorNot extends sfLogger
     }
 
     /**
-     * Sends notification to ErrorNot server.
+     * Sends exception notification to ErrorNot server.
      *
      * @param Exception $exception
      *
@@ -72,16 +72,14 @@ class CI_Logger_ErrorNot extends sfLogger
      *
      * TODO : inject more context data before sending to server
      */
-    public function logException($exception)
+    protected function logException(Exception $exception)
     {
         $this->client->notifyException($exception);
     }
 
     /**
-     * Listens to "application.log" event.
-     *
-     * Make sure we catch full exception data
-     * for sending to ErrorNot server.
+     * Listens to "application.log" event and triggers ErrorNot notification
+     * when event's subject is an exception instance.
      *
      * (non-PHPdoc)
      * @see log/sfLogger::listenToLogEvent()
