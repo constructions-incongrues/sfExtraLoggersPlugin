@@ -11,10 +11,10 @@
   <active>yes</active>
  </lead>
  <date>2010-07-30</date>
- <time>12:55:54</time>
+ <time>13:01:54</time>
  <version>
-  <release>0.2.1</release>
-  <api>0.2.1</api>
+  <release>0.2.2</release>
+  <api>0.2.2</api>
  </version>
  <stability>
   <release>beta</release>
@@ -22,7 +22,7 @@
  </stability>
  <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
  <notes>
-* [ErrorNot] Send non-blocking exception to ErrorNot server
+ * Package official channel is now pear.symfony-project.com 
  </notes>
  <contents>
   <dir baseinstalldir="constructions-incongrues" name="/">
@@ -83,6 +83,21 @@
    <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
    <notes>
 * [ErrorNot] Send non-blocking exception to ErrorNot server
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.2</release>
+    <api>0.2.2</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2010-07-30</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+ * Package official channel is now pear.symfony-project.com
    </notes>
   </release>
  </changelog>
