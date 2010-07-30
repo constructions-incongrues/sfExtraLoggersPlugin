@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-    http://pear.php.net/dtd/tasks-1.0.xsd
-    http://pear.php.net/dtd/package-2.0
-    http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
  <name>sfExtraLoggersPlugin</name>
- <uri>http://github.com/contructions-incongrues/sfExtraLoggersPlugin/tarball/master</uri>
+ <channel>pear.symfony-project.com</channel>
  <summary>Additional symfony loggers</summary>
  <description>Additional loggers for projects developed using the symfony framework.</description>
  <lead>
@@ -14,7 +11,7 @@
   <active>yes</active>
  </lead>
  <date>2010-07-30</date>
- <time>12:46:37</time>
+ <time>12:55:54</time>
  <version>
   <release>0.2.1</release>
   <api>0.2.1</api>
@@ -25,12 +22,13 @@
  </stability>
  <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
  <notes>
- * [ErrorNot] Send non-blocking exception to ErrorNot server
+* [ErrorNot] Send non-blocking exception to ErrorNot server
  </notes>
  <contents>
   <dir baseinstalldir="constructions-incongrues" name="/">
-    <file baseinstalldir="constructions-incongrues" md5sum="b7e47feee85109c4b70fb419974e5bbc" name="lib/CI/Logger/ErrorNot.php" role="php" />
-    <file baseinstalldir="constructions-incongrues" md5sum="2ad11601adaa30db869965dc46e1f037" name="lib/vendor/php-errornot/errornot.php" role="php" />
+   <file baseinstalldir="constructions-incongrues" md5sum="f487132ff48a0ef2a0d901b2c6bee785" name="lib/CI/Logger/ErrorNot.php" role="php" />
+   <file baseinstalldir="constructions-incongrues" md5sum="3b18135f02e75d3cc847449e8baeaebe" name="lib/vendor/php-errornot/errornot.php" role="php" />
+   <file baseinstalldir="constructions-incongrues" md5sum="99d0c417ea142501d66f7bc4b88c3e6e" name="lib/vendor/php-errornot/ErrorNotSocketNonBlockingHttpAdapter.php" role="php" />
   </dir>
  </contents>
  <dependencies>
@@ -45,25 +43,17 @@
     <name>HTTP_Request2</name>
     <channel>pear.php.net</channel>
    </package>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.3.0</min>
+    <max>1.5.0</max>
+    <exclude>1.5.0</exclude>
+   </package>
   </required>
  </dependencies>
  <phprelease />
  <changelog>
-  <release>
-   <version>
-    <release>0.2.1</release>
-    <api>0.2.1</api>
-   </version>
-   <stability>
-    <release>beta</release>
-    <api>beta</api>
-   </stability>
-   <date>2010-07-30</date>
-   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
-   <notes>
- * [ErrorNot] Send non-blocking exception to ErrorNot server
-   </notes>
-  </release>
   <release>
    <version>
     <release>0.2.0</release>
@@ -76,8 +66,23 @@
    <date>2010-07-27</date>
    <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
    <notes>
- * Implemented ErrorNot logger
- * Initial version of pear package
+* Implemented ErrorNot logger
+* Initial version of pear package
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.1</release>
+    <api>0.2.1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2010-07-30</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+* [ErrorNot] Send non-blocking exception to ErrorNot server
    </notes>
   </release>
  </changelog>
