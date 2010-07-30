@@ -55,6 +55,7 @@ class CI_Logger_ErrorNot extends sfLogger
         // Instanciate and configure ErrorNot client
         include(dirname(__FILE__).'/../../vendor/php-errornot/errornot.php');
         $this->client = new Services_ErrorNot($options['server_url'], $options['api_key']);
+        $this->client->setNetworkAdapter(new ErrorNotSocketNonBlockingHttpAdapter());
 
         // Listen for exceptions
         $dispatcher->connect('application.log', array($this, 'listenToLogException'));
@@ -74,6 +75,7 @@ class CI_Logger_ErrorNot extends sfLogger
      */
     protected function logException(Exception $exception)
     {
+        // Send exception notification to server
         $this->client->notifyException($exception);
     }
 
